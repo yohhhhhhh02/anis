@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Échiquier</title>
+    <style>
+       body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: aliceblue;
+            margin: 0px;
+        }
+
+        #echiquier {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            width: 640px;
+            height: 640px;
+            border: 2px solid black;
+            margin: 0px;
+        }
+
+        .case {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+        }
+
+        .vert {
+            background-color: #b5876b;
+        }
+
+        .blanche {
+            background-color: #f0dec7;
+        }
+
+        .pion {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        #liste-mouvements {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: black;
+        }
+        
+        @media (max-width: 600px) {
+            #echiquier {
+                width: 300px;
+                height: 300px;
+            }
+            .case {
+                width: 37.5px;
+                height: 37.5px;
+            }
+            .pion {
+                width: 25px;
+                height: 25px;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 900px) {
+            #echiquier {
+                width: 450px;
+                height: 450px;
+            }
+            .case {
+                width: 56.25px;
+                height: 56.25px;
+            }
+            .pion {
+                width: 35px;
+                height: 35px;
+            }
+        }
+        @media (min-width: 901px) {
+            #echiquier {
+                width: 640px;
+                height: 640px;
+            }
+            .case {
+                width: 80px;
+                height: 80px;
+            }
+            .pion {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="echiquier">
+        <div class="case vert"><img src="images/noir-tour.png" class="pion" alt="Tour noir"></div>
+        <div class="case blanche"><img src="images/noir-cheval.png" class="pion" alt="Cheval noir"></div>
+        <div class="case vert"><img src="images/noir-fou.png" class="pion" alt="Fou noir"></div>
+        <div class="case blanche"><img src="images/noir-dame.png" class="pion" alt="Dame noire"></div>
+        <div class="case vert"><img src="images/noir-roi.png" class="pion" alt="Roi noir"></div>
+        <div class="case blanche"><img src="images/noir-fou.png" class="pion" alt="Fou noir"></div>
+        <div class="case vert"><img src="images/noir-cheval.png" class="pion" alt="Cheval noir"></div>
+        <div class="case blanche"><img src="images/noir-tour.png" class="pion" alt="Tour noir"></div>
+
+        <div class="case blanche"><img src="images/noir-pion.png" class="pion" alt="Pion noir"></div>
+        <div class="case vert"><img src="images/noir-pion.png" class="pion" alt="Pion noir"></div>
+        <div class="case blanche"><img src="images/noir-pion.png" class="pion" alt="Pion noir"></div>
+        <div class="case vert"><img src="images/noir-pion.png" class="pion" alt="Pion noir"></div>
+        <div class="case blanche"><img src="images/noir-pion.png" class="pion" alt="Pion noir"></div>
+        <div class="case vert"><img src="images/noir-pion.png" class="pion" alt="Pion noir"></div>
+        <div class="case blanche"><img src="images/noir-pion.png" class="pion" alt="Pion noir"></div>
+        <div class="case vert"><img src="images/noir-pion.png" class="pion" alt="Pion noir"></div>
+
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+
+
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+        <div class="case blanche"></div>
+        <div class="case vert"></div>
+
+        <div class="case vert"><img src="images/blanc-pion.png" class="pion" alt="Pion blanc"></div>
+        <div class="case blanche"><img src="images/blanc-pion.png" class="pion" alt="Pion blanc"></div>
+        <div class="case vert"><img src="images/blanc-pion.png" class="pion" alt="Pion blanc"></div>
+        <div class="case blanche"><img src="images/blanc-pion.png" class="pion" alt="Pion blanc"></div>
+        <div class="case vert"><img src="images/blanc-pion.png" class="pion" alt="Pion blanc"></div>
+        <div class="case blanche"><img src="images/blanc-pion.png" class="pion" alt="Pion blanc"></div>
+        <div class="case vert"><img src="images/blanc-pion.png" class="pion" alt="Pion blanc"></div>
+        <div class="case blanche"><img src="images/blanc-pion.png" class="pion" alt="Pion blanc"></div>
+
+        <div class="case blanche"><img src="images/blanc-tour.png" class="pion" alt="Tour blanc"></div>
+        <div class="case vert"><img src="images/blanc-cheval.png" class="pion" alt="Cheval blanc"></div>
+        <div class="case blanche"><img src="images/blanc-fou.png" class="pion" alt="Fou blanc"></div>
+        <div class="case vert"><img src="images/blanc-dame.png" class="pion" alt="Dame blanche"></div>
+        <div class="case blanche"><img src="images/blanc-roi.png" class="pion" alt="Roi blanc"></div>
+        <div class="case vert"><img src="images/blanc-fou.png" class="pion" alt="Fou blanc"></div>
+        <div class="case blanche"><img src="images/blanc-cheval.png" class="pion" alt="Cheval blanc"></div>
+        <div class="case vert"><img src="images/blanc-tour.png" class="pion" alt="Tour blanc"></div>
+    </div>
+    <ul id="liste-mouvements"></ul>
+    <script>
+        const echiquier = document.getElementById('echiquier');
+        const listeMouvements = document.getElementById('liste-mouvements');
+        let pieceSelectionnee = null;
+
+        echiquier.addEventListener('click', function(e) {
+            const caseDiv = e.target.closest('.case');
+            const img = caseDiv.querySelector('img');
+    
+            if (pieceSelectionnee) {
+                if (!img) {
+                    caseDiv.appendChild(pieceSelectionnee);
+                    const piece = pieceSelectionnee.alt.split(' ')[0].charAt(0).toUpperCase(); // P, R, D, T, F, C
+                    const couleur = pieceSelectionnee.alt.includes('blanc') ? 'B' : 'N';
+                    const coord = obtenirCoord(caseDiv);
+                    const mouvement = `${piece} ${couleur} ${coord}`;
+                    const li = document.createElement('li');
+                    li.textContent = mouvement;
+                    listeMouvements.appendChild(li);
+                    pieceSelectionnee = null;
+                }
+            } else if (img) {
+                const couleur = img.alt.includes('blanc') ? 'B' : 'N';
+                pieceSelectionnee = img;
+            }
+        });
+        function obtenirCoord(caseDiv) {
+            const index = Array.from(echiquier.children).indexOf(caseDiv);
+            const x = index % 8;
+            const y = Math.floor(index / 8);
+            const lettres = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+            const num = 8 - y;
+            return `${lettres[x]}${num}`;
+        }
+    </script>
+</body >
+</html >
